@@ -1,3 +1,4 @@
+ 
  <div
 	class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
 	<div class="tabs">
@@ -11,19 +12,45 @@
 
 	</div>
 </div> 
-<ion-content style="margin-bottom: 12%; margin-top: 13%;">
-<div class="product-list small-block-grid-3 ">
-	<div ng-repeat="product in products">
+<ion-pane class="pane">
+<ion-nav-view >
+<ion-content class="scroll-content ionic-scroll  has-header">
+<!-- <div class="card gallery-card ">
+	<div ng-repeat="product in products" class='item gallery-item'>
 		<figure>
 			<img ng-src="{{product.image}}" alt="{{product.title}}"
-				style="width: 10%; margin-top:10%">
+				style="width: 10%; margin-top:10%" class='gallery-product-image'>
 			<figcaption>
-				<h2>{{product.title}}, {{product.price}}$</h2>
+				<h2 class='gallery-product-title'>{{product.title}}, {{product.price}}$</h2>
 				<button ng-click="addToCart(product);">Add to cart</button>
 			</figcaption>
 		</figure>
 	</div>
-</div>
+</div> -->
 
+
+<ion-gallery products="products">
+<div class='ion-gallery-content'>
+  <div class='card gallery-card' ng-repeat='product in products track by $index'>
+    <div class='item gallery-item'>
+    <div class="gallery-image-div">
+      <img ng-src='{{product.image}}' class='gallery-product-image' style="width:20%" >
+      <h3 class='gallery-product-title'></h3>
+      <h3 class='gallery-product-price'>{{product.price}}</h3>
+      <button ng-click="addToCart(product);">Add to cart</button>
+    </div>
+  </div>
+  </div>
+</div>
+</ion-gallery>
 </ion-content>
+</ion-nav-view>
+</ion-pane>
+
+
+
+
+
+
+
 
