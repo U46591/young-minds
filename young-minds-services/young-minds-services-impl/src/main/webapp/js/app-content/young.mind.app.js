@@ -32,8 +32,9 @@
     	})
 
     	.when('/viewWallet', {
-    		templateUrl : 'walletView.html',
-    		controller : 'walletCntrl'
+    		templateUrl : 'partial/wallet.htm',
+    		controller : 'WalletController',
+    		controllerAs : 'ym'
 
     	})
     	.when('/viewCart', {
