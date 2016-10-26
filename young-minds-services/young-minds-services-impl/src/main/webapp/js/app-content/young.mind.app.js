@@ -37,8 +37,9 @@
 
     	})
     	.when('/viewCart', {
-    		templateUrl : 'myCartView.html',
-    		controller : 'cartCntrl'
+    		templateUrl : 'partial/cart.htm',
+    		controller : 'CartController',
+    		controllerAs : 'ym'
 
     	})
     	.when('/viewProducts', {

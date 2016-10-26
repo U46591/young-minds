@@ -15,23 +15,11 @@
 <ion-pane class="pane">
 <ion-nav-view >
 <ion-content class="scroll-content ionic-scroll  has-header">
-<!-- <div class="card gallery-card ">
-	<div ng-repeat="product in products" class='item gallery-item'>
-		<figure>
-			<img ng-src="{{product.image}}" alt="{{product.title}}"
-				style="width: 10%; margin-top:10%" class='gallery-product-image'>
-			<figcaption>
-				<h2 class='gallery-product-title'>{{product.title}}, {{product.price}}$</h2>
-				<button ng-click="addToCart(product);">Add to cart</button>
-			</figcaption>
-		</figure>
-	</div>
-</div> -->
 
 
-<ion-gallery products="products">
+<ion-gallery products="ym.products">
 <div class='ion-gallery-content'>
-  <div class='card gallery-card' ng-repeat='product in products track by $index'>
+  <div class='card gallery-card' ng-repeat='product in ym.products track by $index'>
     <div class='item gallery-item'>
     <div class="gallery-image-div">
       <img ng-src='{{product.image}}' class='gallery-product-image' style="width:20%" >
