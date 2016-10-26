@@ -1,8 +1,8 @@
-var app=angular.module('myApp');
-app.controller('myCntrl', myCntrl);
+var app=angular.module('youngMindApp');
+app.controller('LoginCotroller', LoginCotroller);
 
-function myCntrl($scope, $modal,$rootScope,$location) {
-	myCntrl.$inject = ['$scope', '$location'];	  
+function LoginCotroller($scope, $modal,$rootScope,$location) {
+	LoginCotroller.$inject = ['$scope', '$location'];	  
 	$scope.user="Name";
 	$scope.phoneNumbr = /^\+?\d{2}[- ]?\d{3}[- ]?\d{5}$/;
 	$scope.login = function() {
