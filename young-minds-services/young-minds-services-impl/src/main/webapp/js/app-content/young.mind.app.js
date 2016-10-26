@@ -20,7 +20,7 @@
 
     	.when('/register', {
     		controller : 'RegisterController',
-    		templateUrl : 'register.html',
+    		templateUrl : 'partial/register.htm',
     		controllerAs : 'ym'
     		
     	})

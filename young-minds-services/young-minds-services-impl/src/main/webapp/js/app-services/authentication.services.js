@@ -5,12 +5,12 @@
     'use strict';
 
     angular
-        .module('myApp')
+        .module('youngMindApp')
         .factory('AuthenticationService', AuthenticationService);
 
     AuthenticationService.$inject = ['$http', '$cookieStore', '$rootScope', '$timeout', 'UserService'];
     function AuthenticationService($http, $cookieStore, $rootScope, $timeout, UserService) {
-    	alert('AuthenticationService');
+    	alert('AuthenticationService *************');
         var vm=this;
     	var service = {};
         vm.base_url='rest/user'
