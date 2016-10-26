@@ -36,12 +36,12 @@
         
         // private functions
         function handleSuccess(res) {
-        	alert('handle success');
+        	res.success=true;
             return res
         }
 
         function handleError(error) {
-        	alert('handle error');
+        	res.success=false;
         	return error;
            /* return function () {
                 return { success: false, message: error };

@@ -25,8 +25,9 @@
     		
     	})
     	.when('/successPage', {
-    		templateUrl : 'successPage.html',
-    		controller : 'successCntrl'
+    		templateUrl : 'partial/dashboard.htm',
+    		controller : 'DashboardController',
+    		controllerAs : 'ym'
 
     	})
 
