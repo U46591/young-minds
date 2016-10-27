@@ -11,7 +11,7 @@
      	
  	DashboardController.$inject=['UserService','$location'];
  	function DashboardController(UserService,$location){
- 		alert('register controller ***');
+ 		alert('Dashboard controller ***');
  		var ym = this;
  		ym.register = Register;
  		UserService.GET('products.json') .then(function (response) {

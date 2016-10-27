@@ -12,7 +12,8 @@
     function UserService($http,$location,$cookieStore) {
     	alert('USER SERVICE *************');
         var services = {};
-        
+        var ym=this;
+        ym.url="http://localhost:9090/young-minds/rest/user/"
         services.GET=GET;
         services.POST=POST;
         return services;
@@ -24,11 +25,11 @@
         	alert('service layer post method ');
         	return $http({
         		method:'POST',
-        		url:url,
+        		url:ym.url+url,
         		data:data,
         		headers:{
-        			'Content-Type':'application/com.indra.api.services.User-1+json',
-        			'Accept' :'application/com.indra.api.services.User-1+json'
+        			'Content-Type':'application/json',
+        			'Accept' :'application/json'
         		}
         	}).then(handleSuccess,handleError);
         	//return $http.post(url,data).then(handleSuccess,handleError);

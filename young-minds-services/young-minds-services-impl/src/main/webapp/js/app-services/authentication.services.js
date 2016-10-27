@@ -29,12 +29,12 @@
         }
 
         function SetCredentials(loggedInUser) {
-
+        	alert('set credentials');
             $rootScope.globals = {
                 currentUser: loggedInUser
             };
 
-            $http.defaults.headers.common['Authorization'] = 'Basic ' + loggedInUser.authdata; // jshint ignore:line
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + loggedInUser.password; // jshint ignore:line
             $cookieStore.put('globals', $rootScope.globals);
         }
 

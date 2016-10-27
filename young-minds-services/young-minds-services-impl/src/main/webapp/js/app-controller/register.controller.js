@@ -10,18 +10,19 @@
     	.directive('passwordValidattion',PasswordValidation)
     	.directive('validPasswordC',ValidatePasswordC);
 	
-	RegisterController.$inject=['UserService','$location'];
-	function RegisterController(UserService){
+	RegisterController.$inject=['UserService','$location','AuthenticationService'];
+	function RegisterController(UserService,$location,AuthenticationService){
 		alert('register controller ***');
 		var ym = this;
+		ym.user={};
 		ym.register = Register;
 		
 		function Register(){
 			alert('register ------');
-            UserService.POST('http://',ym.user)
+            UserService.POST('register',ym.user)
             .then(function (response) {
                 if (response.success) {
-                    //FlashService.Success('Registration successful', true);
+                	AuthenticationService.SetCredentials(response.data);
                     $location.path('/successPage');
                 } else {
                     //FlashService.Error(response.message);
