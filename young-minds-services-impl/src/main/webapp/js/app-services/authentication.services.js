@@ -10,7 +10,7 @@
 
     AuthenticationService.$inject = ['$http', '$cookieStore', '$rootScope', '$timeout', 'UserService'];
     function AuthenticationService($http, $cookieStore, $rootScope, $timeout, UserService) {
-    	alert('AuthenticationService *************');
+    	//alert('AuthenticationService *************');
         var vm=this;
     	var service = {};
         vm.base_url='rest/user'
@@ -29,7 +29,7 @@
         }
 
         function SetCredentials(loggedInUser) {
-        	alert('set credentials');
+        	//alert('set credentials');
             $rootScope.globals = {
                 currentUser: loggedInUser
             };

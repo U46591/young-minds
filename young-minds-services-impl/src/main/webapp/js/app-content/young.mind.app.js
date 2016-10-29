@@ -74,7 +74,7 @@
             }
             
 */        
-        alert('location change event ***** ')	
+        //alert('location change event ***** ')	
         });
     }
 

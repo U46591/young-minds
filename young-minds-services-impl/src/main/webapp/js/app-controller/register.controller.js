@@ -12,13 +12,13 @@
 	
 	RegisterController.$inject=['UserService','$location','AuthenticationService'];
 	function RegisterController(UserService,$location,AuthenticationService){
-		alert('register controller ***');
+		//alert('register controller ***');
 		var ym = this;
 		ym.user={};
 		ym.register = Register;
 		
 		function Register(){
-			alert('register ------');
+			//alert('register ------');
             UserService.POST('register',ym.user)
             .then(function (response) {
                 if (response.success) {

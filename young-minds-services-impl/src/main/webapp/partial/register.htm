@@ -13,15 +13,8 @@
 			type="password" placeholder="Password" id="password" name="password"
 			data-ng-model="ym.user.password" data-ng-minlength="8"
 			data-ng-maxlength="20"
-			data-ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required />
+			required />
 		</label> 
-		<label class="item item-input"> 
-		<input type="password"
-			placeholder="Confirm Password" id="password_c" name="password_c"
-			data-ng-model="formData.password_c" required />
-
-		</label>
-
 		<button class="button button-block button-positive" data-ng-click="ym.register();"
 			style="margin-bottom: 3%;">SignUp</button>
 
