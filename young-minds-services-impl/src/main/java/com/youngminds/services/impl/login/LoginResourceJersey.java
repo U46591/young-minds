@@ -51,5 +51,9 @@ public class LoginResourceJersey implements LoginResource{
 			return Response.status(500).entity(cee).build();
 		}
 	}
+	@Override
+	public Response testJersey(String tester) {
+		return Response.ok("WELCOME -- "+tester+" !!").build();
+	}
 
 }
